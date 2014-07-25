@@ -1,4 +1,5 @@
-# Day One Gulp Starter Kit (work in progress)
+# Day One Gulp Starter Kit
+*(work in progress)*
 A simple Gulp based starter kit for front-end development utilizing:
 
 * [Gulp](http://gulpjs.com/)
