@@ -1,0 +1,65 @@
+/* ====================================
+ * Site typography.
+ * ==================================== */
+
+/* Headings
+ * ==================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  @include boldFont();
+  line-height: 1.1;
+  margin-top: $font-margin-top;
+  margin-bottom: $font-margin-bottom;
+}
+
+h1, .h1 {
+  @include font-size(110);
+}
+
+h2, .h2 {
+  @include font-size(42);
+}
+
+h3, .h3 {
+  @include font-size(26);
+}
+
+h4, .h4 {
+  @include font-size(26);
+}
+
+h5, .h5 {
+  @include font-size(16);
+}
+
+h6, .h6 {
+  @include font-size(16);
+}
+
+/* Paragraphs, links and combined
+ * ==================================== */
+
+p {}
+
+a {}
+
+p a {}
+
+p, ul, ol, pre, table, blockquote {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+
+/* Separate elements
+ * ==================================== */
+
+em {}
+
+strong, b {}
+
+i {}
+
+time {}
+
+hr {}

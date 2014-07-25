@@ -1,0 +1,44 @@
+/* ====================================
+   Site colors
+   ==================================== */
+
+/*
+   Brand colors
+   ==================================== */
+
+$color-base__brand--main: #e3e3e3;
+$color-base__brand--secondary: #cccccc;
+
+/*
+   Base colors
+   ==================================== */
+
+$color-base__header: #ff3f34;
+$color-base__footer: #be1600;
+$color-base__background: #fffce4;
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+/*
+   Text colors
+   ==================================== */
+
+$color-text: #f22b11;
+$color-link: #fff;
+$color-link-hover: darken($color-link, 10%);
+
+/*
+   Button colors
+   ==================================== */
+
+$color-button__main: #333;
+$color-button__main--hover: darken($color-button__main, 5%);
+
+/*
+   Third party brand colors
+   ==================================== */
+
+$color-facebook: #03539e;
+$color-twitter: #35ccff;
+$color-linkedin: #217bc1;
