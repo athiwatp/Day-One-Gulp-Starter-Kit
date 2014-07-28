@@ -21,6 +21,7 @@ gulp.task('styles', function () {
   return gulp.src('./source/scss/**/*.scss')
     .pipe(plugins.rubySass())
     .pipe(plugins.concat('style.css'))
+    .pipe(plugins.autoprefixer((["last 1 version", "> 1%", "ie 8", "ie 7"], { cascade: true })))
     .pipe(plugins.minifyCss())
     .pipe(gulp.dest('./build/css/'))
     .pipe(plugins.notify({ message: 'Styles task complete' }));;
