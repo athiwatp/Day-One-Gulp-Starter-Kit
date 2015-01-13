@@ -3,6 +3,8 @@
  * ==================================== */
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
+var browserSync = require('browser-sync');
+var reload = browserSync.reload;
 
 /* ====================================
  * Define paths
@@ -13,12 +15,14 @@ var build = './build';
 /* ====================================
  * Web server
  * ==================================== */
-gulp.task('webserver', function() {
-  gulp.src(build)
-    .pipe(plugins.webserver({
-      livereload: true,
-      port: 3000
-    }));
+gulp.task('serve', ['watch'], function(){
+  browserSync({
+    server: {
+      baseDir: build
+    },
+    notify: false,
+    ghostMode: false
+  });
 });
 
 /* ====================================
@@ -31,7 +35,7 @@ gulp.task('styles', function () {
     .pipe(plugins.autoprefixer((["last 1 version", "> 1%", "ie 8", "ie 7"], { cascade: true })))
     .pipe(plugins.minifyCss())
     .pipe(gulp.dest(build + '/css/'))
-    .pipe(plugins.notify({ message: 'Styles task complete' }));;
+    .pipe(reload({stream:true}));
 });
 
 /* ====================================
@@ -40,8 +44,7 @@ gulp.task('styles', function () {
  gulp.task('jshint', function() {
   return gulp.src(source + '/js/script.js')
   .pipe(plugins.jshint())
-  .pipe(plugins.jshint.reporter('default'))
-  .pipe(plugins.notify({ message: 'JS Hinting task complete' }));
+  .pipe(plugins.jshint.reporter('default'));
 });
 
 gulp.task('scripts', function () {
@@ -56,7 +59,7 @@ gulp.task('scripts', function () {
     .pipe(plugins.concat('script.js'))
     .pipe(plugins.rename({suffix: '.min'}))
     .pipe(gulp.dest(build + '/js'))
-    .pipe(plugins.notify({ message: 'Scripts task complete' }));
+    .pipe(reload({stream:true}));
 });
 
 /* ====================================
@@ -66,7 +69,7 @@ gulp.task('images', function() {
   return gulp.src(source + '/img/**/*')
     .pipe(plugins.cache(plugins.imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
     .pipe(gulp.dest(build + '/img'))
-    .pipe(plugins.notify({ message: 'Images task complete' }));
+    .pipe(reload({stream:true}));
 });
 
 /* ====================================
@@ -82,7 +85,7 @@ gulp.task('fileinclude', function() {
       basepath: '@file'
     }))
     .pipe(gulp.dest(build))
-    .pipe(plugins.notify({ message: 'Includes: included' }));
+    .pipe(reload({stream:true}));
 });
 
 /* ====================================
@@ -99,19 +102,18 @@ gulp.task('clean', function() {
 gulp.task('copyfiles', function() {
     return gulp.src(source + '/**/*.{ttf,woff,eof,svg}')
       .pipe(gulp.dest(build))
-      .pipe(plugins.notify({ message: 'Files: copied' }));
+      .pipe(reload({stream:true}));
 });
 
 /* ====================================
  * Default Gulp task
  * ==================================== */
-gulp.task('default', ['clean', 'copyfiles', 'watch', 'webserver']);
+gulp.task('default', ['clean', 'copyfiles', 'serve']);
 
 /* ====================================
  * Watch
  * ==================================== */
 gulp.task('watch', function() {
-
   // Compile on start
   gulp.start('styles', 'scripts', 'images', 'fileinclude');
 

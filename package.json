@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Day One Gulp starter with common tasks",
   "devDependencies": {
+    "browser-sync": "^1.9.0",
     "gulp": "^3.8.6",
     "gulp-autoprefixer": "0.0.8",
     "gulp-cache": "^0.2.0",
@@ -12,12 +13,10 @@
     "gulp-jshint": "^1.7.1",
     "gulp-load-plugins": "^0.5.3",
     "gulp-minify-css": "^0.3.7",
-    "gulp-notify": "^1.4.0",
     "gulp-rename": "^1.2.0",
     "gulp-rimraf": "^0.1.0",
     "gulp-ruby-sass": "^0.6.0",
     "gulp-uglify": "^0.3.1",
-    "gulp-util": "^3.0.0",
-    "gulp-webserver": "^0.4.0"
+    "gulp-util": "^3.0.0"
   }
 }
