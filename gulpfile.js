@@ -12,6 +12,7 @@ var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var runSequence = require('run-sequence');
+var del = require('del');
 
 /* ====================================
  * Web server
@@ -88,10 +89,7 @@ gulp.task('fileinclude', function() {
 /* ====================================
  * Clean up
  * ==================================== */
-gulp.task('clean', function() {
-  return gulp.src(build + '/**/*.*', { read: false })
-    .pipe($.rimraf({ force: true }));
-});
+gulp.task('clean', del.bind(null, ['build/*'], {dot: true}));
 
 /* ====================================
  * Copy files
@@ -122,5 +120,5 @@ gulp.task('watch', function() {
 
   gulp.watch(source + '/img/**/*', ['images', reload]);
 
-  gulp.watch(source + '/htdocs/**/*', ['clean', 'fileinclude', reload]);
+  gulp.watch(source + '/htdocs/**/*', ['fileinclude', reload]);
 });
