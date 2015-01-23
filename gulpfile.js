@@ -52,7 +52,7 @@ gulp.task('scripts', function () {
   return gulp.src([
     source + '/js/vendor/jquery.js',
     source + '/js/vendor/modernizr.js',
-    source + '/js/$.js',
+    source + '/js/plugins.js',
     source + '/js/bootstrap.js',
     source + '/js/script.js'
   ])
