@@ -95,7 +95,7 @@ gulp.task('clean', del.bind(null, ['build/*'], {dot: true}));
  * Copy files
  * ==================================== */
 gulp.task('copyfiles', function() {
-    return gulp.src(source + '/**/*.{ttf,woff,eof,svg}')
+    return gulp.src(source + '/**/*.{ttf,woff,eof,svg,ico}')
       .pipe(gulp.dest(build));
 });
 
