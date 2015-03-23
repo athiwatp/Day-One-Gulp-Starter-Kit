@@ -2,7 +2,7 @@
    Buttons
    ==================================== */
    .btn {
-      background: $color-button__main;
+      background: #111;
       color: #fff;
       border: none;
       padding: 8px 12px;
@@ -17,7 +17,7 @@
       text-transform: uppercase;
       &:hover,
       &:focus {
-        background: $color-button__main--hover;
+        background: #777;
         color: #fff;
       }
    }

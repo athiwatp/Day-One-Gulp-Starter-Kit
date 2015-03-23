@@ -1,51 +1,45 @@
 /* ====================================
-   Bootstrap 3.x
-   ==================================== */
-
-@import 'bootstrap/bootstrap';
-
-/* ====================================
    Dependencies
    ==================================== */
 
-@import 'dependencies/mixins';
-@import 'dependencies/colors';
-@import 'dependencies/fonts';
+@import "dependencies/mixins";
+@import "dependencies/colors";
+@import "dependencies/fonts";
 
 /* ====================================
    Foundation
    ==================================== */
 
-@import 'foundation/base';
-@import 'foundation/typography';
-@import 'foundation/icons';
+@import "foundation/base";
+@import "foundation/typography";
+@import "foundation/icons";
 
 /* ====================================
    Helpers
    ==================================== */
 
-@import 'helpers/classes';
+@import "helpers/classes";
 
 /* ====================================
    Components
    ==================================== */
 
-@import 'components/buttons';
-@import 'components/lists';
-@import 'components/media';
-@import 'components/forms';
+@import "components/buttons";
+@import "components/lists";
+@import "components/media";
+@import "components/forms";
 
 /* ====================================
    Regions
    ==================================== */
 
-@import 'sections/header';
-@import 'sections/navigation';
-@import 'sections/footer';
+@import "sections/header";
+@import "sections/navigation";
+@import "sections/footer";
 
 /* ====================================
    Pages
    ==================================== */
 
-@import 'pages/_home.scss';
+@import "pages/_home.scss";
 

@@ -6,34 +6,22 @@
    Brand colors
    ==================================== */
 
-$color-base__brand--main: #e3e3e3;
-$color-base__brand--secondary: #cccccc;
-
-/*
-   Base colors
-   ==================================== */
-
-$color-base__header: #ff3f34;
-$color-base__footer: #be1600;
-$color-base__background: #fffce4;
-
-$color-white: #ffffff;
-$color-black: #000000;
+// "color-" could be changed to "client-name"
+$color-black: #111111;
+$color-red: #ff0000;
+$color-green: #00ff00;
+$color-blue: #0000ff;
+$color-gray: #cccccc;
+$color-light-gray: #efefef;
+$color-dark-gray: #444444;
 
 /*
    Text colors
    ==================================== */
 
-$color-text: #f22b11;
-$color-link: #fff;
+$color-text: #111111;
+$color-link: #0000ff;
 $color-link-hover: darken($color-link, 10%);
-
-/*
-   Button colors
-   ==================================== */
-
-$color-button__main: #333;
-$color-button__main--hover: darken($color-button__main, 5%);
 
 /*
    Third party brand colors

@@ -12,9 +12,8 @@ html {
 }
 
 body {
-  @include font-size(16);
-  @include regularFont();
+  @include regular-font();
+  @extend %small-font;
   text-rendering: optimizeLegibility;
-  line-height: 1.5;
   font-smoothing: antialiased;
 }
